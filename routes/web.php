@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-//aqui
+//aqui 
 Route::get('/admin/cursos',
 ['as' =>'admin.cursos',
 'uses'=>'App\Http\Controllers\Admin\CursoController@index']);
