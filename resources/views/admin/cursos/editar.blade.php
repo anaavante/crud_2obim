@@ -10,7 +10,7 @@
         method="post" enctype="multipart/form-data"> <!--obrigatorio usar pq envia imagens-->
     {{ csrf_field() }} <!--inclui template do _form // token-->
     <input type="hidden" name="_method" value="put"> <!--crie essa linha sempre que o met do controller for do tipo put-->
-    @include('admin.cursos._form')
+    @include('admin.cursos._form')<!-- _form possui todos os input types-->
     <button class="btn deep-orange">Atualizar</button>   
     </form>   
     </div>
