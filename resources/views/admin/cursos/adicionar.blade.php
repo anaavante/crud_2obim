@@ -1,6 +1,10 @@
 @extends('layout.site')
 @section('titulo','Adicionar Cursos')
 @section('conteudo')
+<!---->
+<!--NÃO TENHO NADA NO VETOR LINHA QUANDO CHAMO O ADICIONAR.BLADE-->
+<!--linha eh um vetor vazio-->
+
 
 <div class="container">
     <h3 class="center">Adicionar Curso</h3>

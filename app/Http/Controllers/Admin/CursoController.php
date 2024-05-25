@@ -19,6 +19,8 @@ class CursoController extends Controller
         return view('admin.cursos.index', compact('rows'));
     }
     
+    //chama a visão adicionar
+    // manda um vetor vazio de linha
     public function adicionar(){
         return view('admin.cursos.adicionar');
     }
@@ -45,6 +47,8 @@ class CursoController extends Controller
     Curso::create($dados);
     return redirect()->route('admin.cursos');
     }
+
+    //chamo editar e passo linha
     public function editar($id){
         //ele recebe o id da rota
         $linha = Curso::find($id); //select from curso where id=$id

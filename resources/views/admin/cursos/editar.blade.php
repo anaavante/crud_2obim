@@ -1,6 +1,8 @@
 @extends('layout.site')
 @section('titulo','Cursos')
 @section('conteudo')
+<!--recebe o vetor linha com os dados do registro para que seja editado-->
+<!--linha eh um vetor preenchido-->
 
 <div class="container">
     <h3 class="center">Editando Curso</h3>
