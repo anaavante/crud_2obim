@@ -6,9 +6,10 @@ use Illuminate\Support\Facades\Route;
 //aqui 
 // 127.0.0.1:8000/admin/cursos --> devo colocar isso no nav
 // SE EU NAO LIGAR O ADMIN EM XAMPP, NAO FUNCIONA!
-Route::get('/https://projetoscti.com.br/projetoscti25/ra2257079/admin/cursos',
+Route::get('/',
 ['as' =>'admin.cursos',
 'uses'=>'App\Http\Controllers\Admin\CursoController@index']);
+
 Route::get('/admin/cursos/adicionar',
 ['as' =>'admin.cursos.adicionar',
 'uses'=>'App\Http\Controllers\Admin\CursoController@adicionar']);
