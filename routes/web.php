@@ -6,6 +6,8 @@ use Illuminate\Support\Facades\Route;
 //aqui 
 // 127.0.0.1:8000/admin/cursos --> devo colocar isso no nav
 // SE EU NAO LIGAR O ADMIN EM XAMPP, NAO FUNCIONA!
+
+Route::group(['middleware'=>'auth'],function(){ //middleware é um container de rotas
 Route::get('/',
 ['as' =>'admin.cursos',
 'uses'=>'App\Http\Controllers\Admin\CursoController@index']);
@@ -30,3 +32,20 @@ Route::put('/admin/cursos/atualizar/{id}',
 Route::get('/admin/cursos/excluir/{id}',
 ['as' =>'admin.cursos.excluir',
 'uses'=>'App\Http\Controllers\Admin\CursoController@excluir']);
+
+Route::get('/',
+['as' =>'site.home',
+'uses'=>'App\Http\Controllers\Site\HomeController@index']);
+
+//Login
+Route::get('/login', ['as'=>'site.login',
+'uses'=>'App\Http\Controllers\Site\LoginController@index']);
+
+Route::get('/login/entrar', ['as'=>'site.login.entrar',
+'uses'=>'App\Http\Controllers\Site\LoginController@entrar']);
+
+Route::get('/login/sair', ['as'=>'site.login.sair',
+'uses'=>'App\Http\Controllers\Site\LoginController@sair']);
+
+});
+
